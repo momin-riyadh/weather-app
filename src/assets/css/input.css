@@ -1,0 +1,14 @@
+@import "tailwindcss";
+
+@layer base {
+    :root {
+        --neutral-900: 243 96% 9%;
+        --neutral-800: 243 27% 20%;
+        --neutral-700: 243 23% 24%;
+        --neutral-600: 243 23% 30%;
+        --neutral-300: 240 6% 70%;
+        --neutral-200: 250 6% 84%;
+        --neutral-0: 0 0% 100%;
+    }
+}
+
