@@ -387,6 +387,9 @@
   .resize {
     resize: both;
   }
+  .grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
   .grid-cols-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
@@ -542,6 +545,9 @@
   }
   .px-\[6px\] {
     padding-inline: 6px;
+  }
+  .px-\[16px\] {
+    padding-inline: 16px;
   }
   .py-2 {
     padding-block: calc(var(--spacing) * 2);
@@ -788,6 +794,11 @@
   .sm\:inline {
     @media (width >= 40rem) {
       display: inline;
+    }
+  }
+  .md\:grid-cols-4 {
+    @media (width >= 48rem) {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
     }
   }
 }
