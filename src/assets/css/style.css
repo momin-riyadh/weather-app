@@ -357,6 +357,9 @@
   .max-w-\[384px\] {
     max-width: 384px;
   }
+  .max-w-\[656px\] {
+    max-width: 656px;
+  }
   .max-w-\[800px\] {
     max-width: 800px;
   }
@@ -796,9 +799,29 @@
       display: inline;
     }
   }
+  .md\:flex {
+    @media (width >= 48rem) {
+      display: flex;
+    }
+  }
   .md\:grid-cols-4 {
     @media (width >= 48rem) {
       grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+  }
+  .md\:flex-nowrap {
+    @media (width >= 48rem) {
+      flex-wrap: nowrap;
+    }
+  }
+  .md\:flex-wrap {
+    @media (width >= 48rem) {
+      flex-wrap: wrap;
+    }
+  }
+  .md\:flex-wrap-reverse {
+    @media (width >= 48rem) {
+      flex-wrap: wrap-reverse;
     }
   }
 }
