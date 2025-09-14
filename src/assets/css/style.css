@@ -323,6 +323,9 @@
   .h-lh {
     height: 1lh;
   }
+  .min-h-\[286px\] {
+    min-height: 286px;
+  }
   .min-h-screen {
     min-height: 100vh;
   }
@@ -379,6 +382,12 @@
   }
   .flex-col {
     flex-direction: column;
+  }
+  .flex-nowrap {
+    flex-wrap: nowrap;
+  }
+  .flex-wrap {
+    flex-wrap: wrap;
   }
   .flex-wrap-reverse {
     flex-wrap: wrap-reverse;
@@ -739,6 +748,11 @@
       background-image: url('/src/assets/images/bg-today-small.svg');
     }
   }
+  .sm\:flex-wrap {
+    @media (width >= 40rem) {
+      flex-wrap: wrap;
+    }
+  }
   .md\:grid-cols-4 {
     @media (width >= 48rem) {
       grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -752,6 +766,21 @@
   .md\:flex-nowrap {
     @media (width >= 48rem) {
       flex-wrap: nowrap;
+    }
+  }
+  .md\:flex-wrap {
+    @media (width >= 48rem) {
+      flex-wrap: wrap;
+    }
+  }
+  .md\:justify-between {
+    @media (width >= 48rem) {
+      justify-content: space-between;
+    }
+  }
+  .md\:justify-center {
+    @media (width >= 48rem) {
+      justify-content: center;
     }
   }
 }
