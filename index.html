@@ -391,23 +391,39 @@
                     <div class="p-[24px] flex flex-col gap-[16px]">
                         <div class="flex justify-between items-center mb-[16px]">
                             <h4>Hourly forecast</h4>
-                            <button
-                                    id=""
-                                    type="button"
-                                    class="inline-flex items-center gap-2 rounded-[8px] bg-neutral-600 px-4 py-2 text-white shadow-md hover:bg-neutral-700 focus:outline-none"
-                                    aria-haspopup="menu"
-                                    aria-expanded="false"
-                                    aria-controls="unitsMenu"
-                            >
-                                <span class="font-medium text-white">Tuesday</span>
-                                <img
-                                        id=""
-                                        src="src/assets/images/icon-dropdown.svg"
-                                        alt=""
-                                        class="h-4 w-4 transition-transform duration-200 ease-out"
-                                        aria-hidden="true"
-                                />
-                            </button>
+
+                            <!--Days Dropdown-->
+                            <div class="relative">
+                                <button
+                                        id="daysDropdownBtn"
+                                        type="button"
+                                        class="inline-flex items-center gap-2 rounded-[8px] bg-neutral-600 px-4 py-2 text-white shadow-md hover:bg-neutral-700 focus:outline-none"
+                                        aria-haspopup="menu"
+                                        aria-expanded="false"
+                                        aria-controls="daysMenu"
+                                >
+                                    <span class="font-medium text-white">Tuesday</span>
+                                    <img
+                                            id=""
+                                            src="src/assets/images/icon-dropdown.svg"
+                                            alt=""
+                                            class="h-4 w-4 transition-transform duration-200 ease-out"
+                                            aria-hidden="true"
+                                    />
+                                </button>
+                                <div id="daysMenu" role="menu"
+                                     class="hidden absolute right-0 min-w-[214px] min-h-[313px] z-10 mt-2 rounded-[12px] bg-natural-800 border border-neutral-600 bg-neutral-800 focus:outline-none">
+                                    <div class="flex flex-col gap-1 p-2">
+                                        <span class="bg-neutral-700 px-2 py-2.5 rounded-[8px] text-[16px] font-medium text-white cursor-pointer selected">Monday</span>
+                                        <span class="hover:bg-neutral-700 px-2 py-2.5 rounded-[8px] text-[16px] font-medium text-white cursor-pointer">Tuesday</span>
+                                        <span class="hover:bg-neutral-700 px-2 py-2.5 rounded-[8px] text-[16px] font-medium text-white cursor-pointer">Wednesday</span>
+                                        <span class="hover:bg-neutral-700 px-2 py-2.5 rounded-[8px] text-[16px] font-medium text-white cursor-pointer">Thursday</span>
+                                        <span class="hover:bg-neutral-700 px-2 py-2.5 rounded-[8px] text-[16px] font-medium text-white cursor-pointer">Friday</span>
+                                        <span class="hover:bg-neutral-700 px-2 py-2.5 rounded-[8px] text-[16px] font-medium text-white cursor-pointer">Saturday</span>
+                                        <span class="hover:bg-neutral-700 px-2 py-2.5 rounded-[8px] text-[16px] font-medium text-white cursor-pointer">Sunday</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
 
 
@@ -515,8 +531,31 @@
         let btn = document.getElementById('unitsDropdownBtn');
         let menu = document.getElementById('unitsMenu');
         let chevron = document.getElementById('unitsChevron');
+        let btnDays = document.getElementById('daysDropdownBtn');
+        let menuDays = document.getElementById('daysMenu');
 
+        if (!btnDays || !menuDays) return;
         if (!btn || !menu) return;
+
+        function openMenuDays() {
+            menuDays.classList.remove('hidden');
+            btnDays.setAttribute('aria-expanded', 'true');
+        }
+
+        function closeMenuDays() {
+            menuDays.classList.add('hidden');
+            btnDays.setAttribute('aria-expanded', 'false');
+        }
+
+        function toggleMenuDays() {
+            let expanded = btnDays.getAttribute('aria-expanded') === 'true';
+            expanded ? closeMenuDays() : openMenuDays();
+        }
+
+        btnDays.addEventListener('click', function (e) {
+            e.stopPropagation();
+            toggleMenuDays();
+        });
 
         function openMenu() {
             menu.classList.remove('hidden');
@@ -531,7 +570,7 @@
         }
 
         function toggleMenu() {
-            var expanded = btn.getAttribute('aria-expanded') === 'true';
+            let expanded = btn.getAttribute('aria-expanded') === 'true';
             expanded ? closeMenu() : openMenu();
         }
 
@@ -574,9 +613,9 @@
 
         // Selection handling
         menu.addEventListener('click', function (e) {
-            var target = e.target.closest('[role="menuitemradio"]');
+            let target = e.target.closest('[role="menuitemradio"]');
             if (!target) return;
-            var items = menu.querySelectorAll('[role="menuitemradio"]');
+            let items = menu.querySelectorAll('[role="menuitemradio"]');
             items.forEach(function (el) {
                 el.setAttribute('aria-checked', String(el === target));
             });
@@ -595,6 +634,13 @@
                 closeMenu();
             }
         });
+
+        // Click outside to close days Menu
+        document.addEventListener('click', function (e) {
+            if (!menuDays.contains(e.target) && !btnDays.contains(e.target)) {
+                closeMenuDays();
+            }
+        })
 
         // Close on window blur (optional)
         window.addEventListener('blur', closeMenu);
