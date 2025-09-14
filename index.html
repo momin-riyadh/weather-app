@@ -391,7 +391,23 @@
                     <div class="p-[24px] flex flex-col gap-[16px]">
                         <div class="flex justify-between items-center mb-[16px]">
                             <h4>Hourly forecast</h4>
-                            <button>Tuesday</button>
+                            <button
+                                    id=""
+                                    type="button"
+                                    class="inline-flex items-center gap-2 rounded-[8px] bg-neutral-600 px-4 py-2 text-white shadow-md hover:bg-neutral-700 focus:outline-none"
+                                    aria-haspopup="menu"
+                                    aria-expanded="false"
+                                    aria-controls="unitsMenu"
+                            >
+                                <span class="font-medium text-white">Tuesday</span>
+                                <img
+                                        id=""
+                                        src="src/assets/images/icon-dropdown.svg"
+                                        alt=""
+                                        class="h-4 w-4 transition-transform duration-200 ease-out"
+                                        aria-hidden="true"
+                                />
+                            </button>
                         </div>
 
 
@@ -496,9 +512,9 @@
 <script type="text/javascript">
     // Dropdown behavior
     (function () {
-        var btn = document.getElementById('unitsDropdownBtn');
-        var menu = document.getElementById('unitsMenu');
-        var chevron = document.getElementById('unitsChevron');
+        let btn = document.getElementById('unitsDropdownBtn');
+        let menu = document.getElementById('unitsMenu');
+        let chevron = document.getElementById('unitsChevron');
 
         if (!btn || !menu) return;
 
