@@ -743,6 +743,11 @@
       outline-style: none;
     }
   }
+  .max-\[640px\]\:bg-\[url\(\'\/src\/assets\/images\/bg-today-small\.svg\'\)\] {
+    @media (width < 640px) {
+      background-image: url('/src/assets/images/bg-today-small.svg');
+    }
+  }
   .max-\[375px\]\:bg-\[url\(\'\/src\/assets\/images\/bg-today-small\.svg\'\)\] {
     @media (width < 375px) {
       background-image: url('/src/assets/images/bg-today-small.svg');
