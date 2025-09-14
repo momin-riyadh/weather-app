@@ -23,6 +23,8 @@
     --text-base: 1rem;
     --text-base--line-height: calc(1.5 / 1);
     --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
     --radius-lg: 0.5rem;
     --radius-xl: 0.75rem;
     --ease-out: cubic-bezier(0, 0, 0.2, 1);
@@ -252,9 +254,6 @@
   .mb-3 {
     margin-bottom: calc(var(--spacing) * 3);
   }
-  .mb-4 {
-    margin-bottom: calc(var(--spacing) * 4);
-  }
   .mb-\[16px\] {
     margin-bottom: 16px;
   }
@@ -303,11 +302,20 @@
   .h-\[118px\] {
     height: 118px;
   }
+  .h-\[120\] {
+    height: 120;
+  }
+  .h-\[120px\] {
+    height: 120px;
+  }
   .h-\[165px\] {
     height: 165px;
   }
   .h-\[286px\] {
     height: 286px;
+  }
+  .h-\[initial\] {
+    height: initial;
   }
   .h-full {
     height: 100%;
@@ -326,6 +334,12 @@
   }
   .w-\[100px\] {
     width: 100px;
+  }
+  .w-\[120\] {
+    width: 120;
+  }
+  .w-\[120px\] {
+    width: 120px;
   }
   .w-\[214px\] {
     width: 214px;
@@ -469,6 +483,9 @@
   .p-4 {
     padding: calc(var(--spacing) * 4);
   }
+  .p-6 {
+    padding: calc(var(--spacing) * 6);
+  }
   .p-\[10px\] {
     padding: 10px;
   }
@@ -523,6 +540,9 @@
   .text-center {
     text-align: center;
   }
+  .font-\[\'Bricolage_Grotesque\'\,_sans-serif\] {
+    font-family: 'Bricolage Grotesque', sans-serif;
+  }
   .text-base {
     font-size: var(--text-base);
     line-height: var(--tw-leading, var(--text-base--line-height));
@@ -538,6 +558,9 @@
   }
   .text-\[20px\] {
     font-size: 20px;
+  }
+  .text-\[28px\] {
+    font-size: 28px;
   }
   .text-\[32px\] {
     font-size: 32px;
@@ -556,9 +579,17 @@
     --tw-leading: 1em;
     line-height: 1em;
   }
+  .font-bold {
+    --tw-font-weight: var(--font-weight-bold);
+    font-weight: var(--font-weight-bold);
+  }
   .font-medium {
     --tw-font-weight: var(--font-weight-medium);
     font-weight: var(--font-weight-medium);
+  }
+  .font-semibold {
+    --tw-font-weight: var(--font-weight-semibold);
+    font-weight: var(--font-weight-semibold);
   }
   .text-neutral-200 {
     color: var(--color-neutral-200);
@@ -568,6 +599,15 @@
   }
   .text-white {
     color: var(--color-white);
+  }
+  .text-white\/80 {
+    color: color-mix(in srgb, #fff 80%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      color: color-mix(in oklab, var(--color-white) 80%, transparent);
+    }
+  }
+  .italic {
+    font-style: italic;
   }
   .shadow-\[0_8px_30px_rgb\(0\,0\,0\,0\.2\)\] {
     --tw-shadow: 0 8px 30px var(--tw-shadow-color, rgb(0,0,0,0.2));
@@ -715,6 +755,20 @@
     }
   }
 }
+@font-face {
+  font-family: 'Dm Sans';
+  src: url('../resources/assets/fonts/DM_Sans/DMSans-VariableFont_opsz,wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-stretch: 75% 100%;
+  font-optical-sizing: auto;
+}
+@font-face {
+  font-family: 'Bricolage Grotesque';
+  src: url('../resources/assets/fonts/Bricolage_Grotesque/BricolageGrotesque-VariableFont_opsz,wdth,wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-stretch: 75% 100%;
+  font-optical-sizing: auto;
+}
 @layer base {
   :root {
     --neutral-900: 243 96% 9%;
@@ -724,7 +778,9 @@
     --neutral-300: 240 6% 70%;
     --neutral-200: 250 6% 84%;
     --neutral-0: 0 0% 100%;
+    --font-family-primary: 'Dm Sans', sans-serif;
     color: #ffffff;
+    font-family: var(--font-family-primary);
   }
 }
 @property --tw-border-style {
