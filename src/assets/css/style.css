@@ -335,6 +335,12 @@
   .w-5 {
     width: calc(var(--spacing) * 5);
   }
+  .w-40 {
+    width: calc(var(--spacing) * 40);
+  }
+  .w-\[40px\] {
+    width: 40px;
+  }
   .w-\[100px\] {
     width: 100px;
   }
