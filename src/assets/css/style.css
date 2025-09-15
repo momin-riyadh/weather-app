@@ -307,20 +307,11 @@
   .h-\[118px\] {
     height: 118px;
   }
-  .h-\[120\] {
-    height: 120;
-  }
   .h-\[120px\] {
     height: 120px;
   }
   .h-\[165px\] {
     height: 165px;
-  }
-  .h-\[286px\] {
-    height: 286px;
-  }
-  .h-\[initial\] {
-    height: initial;
   }
   .h-full {
     height: 100%;
@@ -343,17 +334,11 @@
   .w-5 {
     width: calc(var(--spacing) * 5);
   }
-  .w-40 {
-    width: calc(var(--spacing) * 40);
-  }
   .w-\[40px\] {
     width: 40px;
   }
   .w-\[100px\] {
     width: 100px;
-  }
-  .w-\[120\] {
-    width: 120;
   }
   .w-\[120px\] {
     width: 120px;
@@ -403,9 +388,6 @@
   .flex-col {
     flex-direction: column;
   }
-  .flex-nowrap {
-    flex-wrap: nowrap;
-  }
   .flex-wrap {
     flex-wrap: wrap;
   }
@@ -417,9 +399,6 @@
   }
   .items-end {
     align-items: flex-end;
-  }
-  .items-stretch {
-    align-items: stretch;
   }
   .justify-between {
     justify-content: space-between;
@@ -457,9 +436,6 @@
   .rounded-lg {
     border-radius: var(--radius-lg);
   }
-  .rounded-md {
-    border-radius: var(--radius-md);
-  }
   .rounded-xl {
     border-radius: var(--radius-xl);
   }
@@ -493,9 +469,6 @@
   }
   .bg-transparent {
     background-color: transparent;
-  }
-  .bg-white {
-    background-color: var(--color-white);
   }
   .bg-white\/5 {
     background-color: color-mix(in srgb, #fff 5%, transparent);
@@ -672,9 +645,6 @@
     --tw-ring-shadow: var(--tw-ring-inset,) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color, currentcolor);
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
   }
-  .ring-black {
-    --tw-ring-color: var(--color-black);
-  }
   .ring-neutral-700 {
     --tw-ring-color: var(--color-neutral-700);
   }
@@ -738,13 +708,6 @@
       }
     }
   }
-  .hover\:bg-neutral-600 {
-    &:hover {
-      @media (hover: hover) {
-        background-color: var(--color-neutral-600);
-      }
-    }
-  }
   .hover\:bg-neutral-700 {
     &:hover {
       @media (hover: hover) {
@@ -796,14 +759,19 @@
       background-image: url('/src/assets/images/bg-today-small.svg');
     }
   }
-  .max-\[375px\]\:bg-\[url\(\'\/src\/assets\/images\/bg-today-small\.svg\'\)\] {
-    @media (width < 375px) {
-      background-image: url('/src/assets/images/bg-today-small.svg');
+  .md\:w-100 {
+    @media (width >= 48rem) {
+      width: calc(var(--spacing) * 100);
     }
   }
-  .sm\:flex-wrap {
-    @media (width >= 40rem) {
-      flex-wrap: wrap;
+  .md\:w-auto {
+    @media (width >= 48rem) {
+      width: auto;
+    }
+  }
+  .md\:w-full {
+    @media (width >= 48rem) {
+      width: 100%;
     }
   }
   .md\:grid-cols-4 {
@@ -821,19 +789,9 @@
       flex-wrap: nowrap;
     }
   }
-  .md\:flex-wrap {
-    @media (width >= 48rem) {
-      flex-wrap: wrap;
-    }
-  }
   .md\:justify-between {
     @media (width >= 48rem) {
       justify-content: space-between;
-    }
-  }
-  .md\:justify-center {
-    @media (width >= 48rem) {
-      justify-content: center;
     }
   }
 }
