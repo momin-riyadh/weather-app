@@ -14,7 +14,7 @@
     <div class="mx-auto max-w-[1216px] px-[16px]">
 
         <!--**********************************
-                      Top Header Parts
+                     Top Header Parts
          ***********************************-->
         <header class="w-full">
             <div class="flex justify-between items-center py-4 bg-neutral-900 shadow-md">
@@ -121,7 +121,9 @@
             </div>
 
             <div class="flex justify-center items-center text-center">
-                <h1 class="text-white text-[52px] leading-[1.3]">How's the sky looking today?</h1>
+                <h1 class="text-white text-[52px] leading-[1.3] font-bold font-['Bricolage_Grotesque',_sans-serif]">
+                    How's the sky
+                    looking today?</h1>
             </div>
 
 
@@ -135,7 +137,7 @@
             <!-- Search container -->
             <div class="mt-[64px] mb-[48px] flex justify-center">
                 <form id="searchForm" class="w-full max-w-[656px]">
-                    <div class="flex items-stretch gap-2">
+                    <div class="flex flex-wrap md:flex-nowrap gap-2">
                         <!-- Input group -->
                         <div class="group relative flex h-12 flex-1 items-center gap-3 rounded-[12px] bg-white/5 ring-1 ring-white/10 hover:ring-white/20 focus-within:ring-blue-400/50 backdrop-blur px-4 shadow-[0_8px_30px_rgb(0,0,0,0.2)] transition">
                             <!-- Search icon -->
@@ -171,7 +173,7 @@
 
                         <!-- Submit button -->
                         <button type="submit"
-                                class="inline-flex h-12 items-center justify-center rounded-[12px] bg-indigo-600 px-6 text-white font-medium shadow-[0_8px_30px_rgb(0,0,0,0.2)] hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-300">
+                                class="inline-flex w-full md:w-auto h-12 items-center justify-center rounded-[12px] bg-indigo-600 px-6 text-white font-medium shadow-[0_8px_30px_rgb(0,0,0,0.2)] hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-300">
                             Search
                         </button>
                     </div>
@@ -180,26 +182,27 @@
             <!--End Search Container-->
 
 
-            <div class="flex flex-wrap-reverse md:flex-nowrap justify-between w-full gap-[32px]">
+            <div class="flex flex-wrap lg:flex-nowrap justify-between w-full gap-[32px]">
 
 
-                <div class="max-w-[800px] w-full">
+                <div class="lg:max-w-[800px] w-full">
 
 
                     <!--Card 1-->
-                    <div class="flex justify-between items-center h-[286px] w-full gap-4 bg-neutral-800 rounded-xl p-4 bg-[url('/src/assets/images/bg-today-large.svg')] bg-cover bg-center bg-no-repeat max-[375px]:bg-[url('/src/assets/images/bg-today-small.svg')]">
+                    <div class="flex justify-between items-center min-h-[286px] w-full gap-4 bg-neutral-800 rounded-xl p-4 bg-[url('/src/assets/images/bg-today-large.svg')] bg-cover bg-center bg-no-repeat max-[640px]:bg-[url('/src/assets/images/bg-today-small.svg')]">
 
-                        <div class="flex flex-shrink-0 justify-between items-center w-full">
+                        <div class="flex flex-wrap flex-shrink-0 justify-center md:justify-between items-center w-full p-6">
                             <div class="flex flex-col gap-1 text-white">
-                                <h2>Berlin, Germany</h2>
-                                <p>Tuesday, Aug 5, 2025</p>
+                                <h2 class="text-[28px] font-bold">Berlin, Germany</h2>
+                                <p class="text-[18px] font-medium text-white/80">Tuesday, Aug 5, 2025</p>
                             </div>
 
-                            <div class="flex shrink-0 gap-4 align-center text-white ">
-                                <img width="120" height="120" src="src/assets/images/icon-sunny.webp" alt="">
-                                <span class="text-[96px]">20°</span>
+                            <div class="flex shrink-0 gap-4 align-center text-white">
+                                <img class="h-[120px] w-[120px]" src="src/assets/images/icon-sunny.webp" alt="">
+                                <span class="text-[96px] font-semibold italic">20°</span>
                             </div>
                         </div>
+
                     </div>
 
 
@@ -224,158 +227,158 @@
                         </div>
 
                     </div>
-
-
                     <!-- card 3-->
-                    <!--Daily Forecast-->
 
+
+                    <!--Daily Forecast-->
                     <div class="mt-[48px]">
                         <h1 class="text-white text-[20px] leading-[1em] mb-[20px]">Daily Forecast</h1>
 
-                        <div class="grid grid-cols-3 md:grid-cols-7 gap-[16px]">
+                        <div class="@container">
+                            <div class="grid grid-cols-3 gap-3 @min-md:grid-cols-6 @min-lg:grid-cols-7 @min-md:gap-[16px] @min-sm:gap-4">
 
 
-                            <div class="bg-neutral-800 border border-neutral-600 rounded-[12px] w-[100px] h-[165px] text-white p-[10px]">
-                                <div class="flex flex-col justify-between h-full">
+                                <div class="bg-neutral-800 border border-neutral-600 rounded-[12px] max-w-[110px] h-[165px] text-white p-[10px]">
+                                    <div class="flex flex-col justify-between h-full">
 
-                                    <div class="flex  justify-center items-center">
-                                        <span class="text-[18px]">Tue</span>
+                                        <div class="flex  justify-center items-center">
+                                            <span class="text-[18px]">Tue</span>
+                                        </div>
+
+                                        <div class="flex  justify-center items-center">
+                                            <span><img width="60" src="src/assets/images/icon-overcast.webp" alt=""></span>
+                                        </div>
+
+                                        <div class="flex justify-between items-end">
+                                            <span class="text-[16px]">20°</span>
+                                            <span class="text-[16px] text-neutral-200">14°</span>
+                                        </div>
+
                                     </div>
-
-                                    <div class="flex  justify-center items-center">
-                                        <span><img width="60" src="src/assets/images/icon-overcast.webp" alt=""></span>
-                                    </div>
-
-                                    <div class="flex justify-between items-end">
-                                        <span class="text-[16px]">20°</span>
-                                        <span class="text-[16px] text-neutral-200">14°</span>
-                                    </div>
-
                                 </div>
-                            </div>
 
 
-                            <div class="bg-neutral-800 border border-neutral-600 rounded-[12px] w-[100px] h-[165px] text-white p-[10px]">
-                                <div class="flex flex-col justify-between h-full">
+                                <div class="bg-neutral-800 border border-neutral-600 rounded-[12px] max-w-[110px] h-[165px] text-white p-[10px]">
+                                    <div class="flex flex-col justify-between h-full">
 
-                                    <div class="flex  justify-center items-center">
-                                        <span class="text-[18px]">Tue</span>
+                                        <div class="flex  justify-center items-center">
+                                            <span class="text-[18px]">Tue</span>
+                                        </div>
+
+                                        <div class="flex  justify-center items-center">
+                                            <span><img width="60" src="src/assets/images/icon-overcast.webp" alt=""></span>
+                                        </div>
+
+                                        <div class="flex justify-between items-end">
+                                            <span class="text-[16px]">20°</span>
+                                            <span class="text-[16px] text-neutral-200">14°</span>
+                                        </div>
+
                                     </div>
-
-                                    <div class="flex  justify-center items-center">
-                                        <span><img width="60" src="src/assets/images/icon-overcast.webp" alt=""></span>
-                                    </div>
-
-                                    <div class="flex justify-between items-end">
-                                        <span class="text-[16px]">20°</span>
-                                        <span class="text-[16px] text-neutral-200">14°</span>
-                                    </div>
-
                                 </div>
-                            </div>
 
 
-                            <div class="bg-neutral-800 border border-neutral-600 rounded-[12px] w-[100px] h-[165px] text-white p-[10px]">
-                                <div class="flex flex-col justify-between h-full">
+                                <div class="bg-neutral-800 border border-neutral-600 rounded-[12px] max-w-[110px] h-[165px] text-white p-[10px]">
+                                    <div class="flex flex-col justify-between h-full">
 
-                                    <div class="flex  justify-center items-center">
-                                        <span class="text-[18px]">Tue</span>
+                                        <div class="flex  justify-center items-center">
+                                            <span class="text-[18px]">Tue</span>
+                                        </div>
+
+                                        <div class="flex  justify-center items-center">
+                                            <span><img width="60" src="src/assets/images/icon-overcast.webp" alt=""></span>
+                                        </div>
+
+                                        <div class="flex justify-between items-end">
+                                            <span class="text-[16px]">20°</span>
+                                            <span class="text-[16px] text-neutral-200">14°</span>
+                                        </div>
+
                                     </div>
-
-                                    <div class="flex  justify-center items-center">
-                                        <span><img width="60" src="src/assets/images/icon-overcast.webp" alt=""></span>
-                                    </div>
-
-                                    <div class="flex justify-between items-end">
-                                        <span class="text-[16px]">20°</span>
-                                        <span class="text-[16px] text-neutral-200">14°</span>
-                                    </div>
-
                                 </div>
-                            </div>
 
 
-                            <div class="bg-neutral-800 border border-neutral-600 rounded-[12px] w-[100px] h-[165px] text-white p-[10px]">
-                                <div class="flex flex-col justify-between h-full">
+                                <div class="bg-neutral-800 border border-neutral-600 rounded-[12px] max-w-[110px] h-[165px] text-white p-[10px]">
+                                    <div class="flex flex-col justify-between h-full">
 
-                                    <div class="flex  justify-center items-center">
-                                        <span class="text-[18px]">Tue</span>
+                                        <div class="flex  justify-center items-center">
+                                            <span class="text-[18px]">Tue</span>
+                                        </div>
+
+                                        <div class="flex  justify-center items-center">
+                                            <span><img width="60" src="src/assets/images/icon-overcast.webp" alt=""></span>
+                                        </div>
+
+                                        <div class="flex justify-between items-end">
+                                            <span class="text-[16px]">20°</span>
+                                            <span class="text-[16px] text-neutral-200">14°</span>
+                                        </div>
+
                                     </div>
-
-                                    <div class="flex  justify-center items-center">
-                                        <span><img width="60" src="src/assets/images/icon-overcast.webp" alt=""></span>
-                                    </div>
-
-                                    <div class="flex justify-between items-end">
-                                        <span class="text-[16px]">20°</span>
-                                        <span class="text-[16px] text-neutral-200">14°</span>
-                                    </div>
-
                                 </div>
-                            </div>
 
 
-                            <div class="bg-neutral-800 border border-neutral-600 rounded-[12px] w-[100px] h-[165px] text-white p-[10px]">
-                                <div class="flex flex-col justify-between h-full">
+                                <div class="bg-neutral-800 border border-neutral-600 rounded-[12px] max-w-[110px] h-[165px] text-white p-[10px]">
+                                    <div class="flex flex-col justify-between h-full">
 
-                                    <div class="flex  justify-center items-center">
-                                        <span class="text-[18px]">Tue</span>
+                                        <div class="flex  justify-center items-center">
+                                            <span class="text-[18px]">Tue</span>
+                                        </div>
+
+                                        <div class="flex  justify-center items-center">
+                                            <span><img width="60" src="src/assets/images/icon-overcast.webp" alt=""></span>
+                                        </div>
+
+                                        <div class="flex justify-between items-end">
+                                            <span class="text-[16px]">20°</span>
+                                            <span class="text-[16px] text-neutral-200">14°</span>
+                                        </div>
+
                                     </div>
-
-                                    <div class="flex  justify-center items-center">
-                                        <span><img width="60" src="src/assets/images/icon-overcast.webp" alt=""></span>
-                                    </div>
-
-                                    <div class="flex justify-between items-end">
-                                        <span class="text-[16px]">20°</span>
-                                        <span class="text-[16px] text-neutral-200">14°</span>
-                                    </div>
-
                                 </div>
-                            </div>
 
 
-                            <div class="bg-neutral-800 border border-neutral-600 rounded-[12px] w-[100px] h-[165px] text-white p-[10px]">
-                                <div class="flex flex-col justify-between h-full">
+                                <div class="bg-neutral-800 border border-neutral-600 rounded-[12px] max-w-[110px] h-[165px] text-white p-[10px]">
+                                    <div class="flex flex-col justify-between h-full">
 
-                                    <div class="flex  justify-center items-center">
-                                        <span class="text-[18px]">Tue</span>
+                                        <div class="flex  justify-center items-center">
+                                            <span class="text-[18px]">Tue</span>
+                                        </div>
+
+                                        <div class="flex  justify-center items-center">
+                                            <span><img width="60" src="src/assets/images/icon-overcast.webp" alt=""></span>
+                                        </div>
+
+                                        <div class="flex justify-between items-end">
+                                            <span class="text-[16px]">20°</span>
+                                            <span class="text-[16px] text-neutral-200">14°</span>
+                                        </div>
+
                                     </div>
-
-                                    <div class="flex  justify-center items-center">
-                                        <span><img width="60" src="src/assets/images/icon-overcast.webp" alt=""></span>
-                                    </div>
-
-                                    <div class="flex justify-between items-end">
-                                        <span class="text-[16px]">20°</span>
-                                        <span class="text-[16px] text-neutral-200">14°</span>
-                                    </div>
-
                                 </div>
-                            </div>
 
 
-                            <div class="bg-neutral-800 border border-neutral-600 rounded-[12px] w-[100px] h-[165px] text-white p-[10px]">
-                                <div class="flex flex-col justify-between h-full">
+                                <div class="bg-neutral-800 border border-neutral-600 rounded-[12px] max-w-[110px] h-[165px] text-white p-[10px]">
+                                    <div class="flex flex-col justify-between h-full">
 
-                                    <div class="flex  justify-center items-center">
-                                        <span class="text-[18px]">Tue</span>
+                                        <div class="flex  justify-center items-center">
+                                            <span class="text-[18px]">Tue</span>
+                                        </div>
+
+                                        <div class="flex  justify-center items-center">
+                                            <span><img width="60" src="src/assets/images/icon-overcast.webp" alt=""></span>
+                                        </div>
+
+                                        <div class="flex justify-between items-end">
+                                            <span class="text-[16px]">20°</span>
+                                            <span class="text-[16px] text-neutral-200">14°</span>
+                                        </div>
+
                                     </div>
-
-                                    <div class="flex  justify-center items-center">
-                                        <span><img width="60" src="src/assets/images/icon-overcast.webp" alt=""></span>
-                                    </div>
-
-                                    <div class="flex justify-between items-end">
-                                        <span class="text-[16px]">20°</span>
-                                        <span class="text-[16px] text-neutral-200">14°</span>
-                                    </div>
-
                                 </div>
+
+
                             </div>
-
-
-
                         </div>
 
                     </div>
@@ -385,11 +388,43 @@
 
                 </div>
 
-                <div class="max-w-[384px] w-full bg-neutral-800 rounded-[20px]">
+                <div class="lg:max-w-[384px] w-full bg-neutral-800 rounded-[20px]">
                     <div class="p-[24px] flex flex-col gap-[16px]">
                         <div class="flex justify-between items-center mb-[16px]">
                             <h4>Hourly forecast</h4>
-                            <button>Tuesday</button>
+
+                            <!--Days Dropdown-->
+                            <div class="relative">
+                                <button
+                                        id="daysDropdownBtn"
+                                        type="button"
+                                        class="inline-flex items-center gap-2 rounded-[8px] bg-neutral-600 px-4 py-2 text-white shadow-md hover:bg-neutral-700 focus:outline-none"
+                                        aria-haspopup="menu"
+                                        aria-expanded="false"
+                                        aria-controls="daysMenu"
+                                >
+                                    <span class="font-medium text-white">Tuesday</span>
+                                    <img
+                                            id=""
+                                            src="src/assets/images/icon-dropdown.svg"
+                                            alt=""
+                                            class="h-4 w-4 transition-transform duration-200 ease-out"
+                                            aria-hidden="true"
+                                    />
+                                </button>
+                                <div id="daysMenu" role="menu"
+                                     class="hidden absolute right-0 min-w-[214px] min-h-[313px] z-10 mt-2 rounded-[12px] bg-natural-800 border border-neutral-600 bg-neutral-800 focus:outline-none">
+                                    <div class="flex flex-col gap-1 p-2">
+                                        <span class="bg-neutral-700 px-2 py-2.5 rounded-[8px] text-[16px] font-medium text-white cursor-pointer selected">Monday</span>
+                                        <span class="hover:bg-neutral-700 px-2 py-2.5 rounded-[8px] text-[16px] font-medium text-white cursor-pointer">Tuesday</span>
+                                        <span class="hover:bg-neutral-700 px-2 py-2.5 rounded-[8px] text-[16px] font-medium text-white cursor-pointer">Wednesday</span>
+                                        <span class="hover:bg-neutral-700 px-2 py-2.5 rounded-[8px] text-[16px] font-medium text-white cursor-pointer">Thursday</span>
+                                        <span class="hover:bg-neutral-700 px-2 py-2.5 rounded-[8px] text-[16px] font-medium text-white cursor-pointer">Friday</span>
+                                        <span class="hover:bg-neutral-700 px-2 py-2.5 rounded-[8px] text-[16px] font-medium text-white cursor-pointer">Saturday</span>
+                                        <span class="hover:bg-neutral-700 px-2 py-2.5 rounded-[8px] text-[16px] font-medium text-white cursor-pointer">Sunday</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
 
 
@@ -398,7 +433,7 @@
 
                             <div class="flex justify-between items-center gap-2 bg-neutral-700 rounded-[8px] border border-neutral-600 py-[10px] px-[10px] pr-[16px] pl-[12px] ">
                                 <span class="flex items-center gap-2">
-                                   <img width="40" src="src/assets/images/icon-overcast.webp" alt="">
+                                   <img class="w-[40px]" src="src/assets/images/icon-overcast.webp" alt="">
                                     <time>3 PM</time>
                                 </span>
                                 <span class="text-[16px]">
@@ -408,7 +443,7 @@
 
                             <div class="flex justify-between items-center gap-2 bg-neutral-700 rounded-[8px] border border-neutral-600 py-[10px] px-[10px] pr-[16px] pl-[12px] ">
                                 <span class="flex items-center gap-2">
-                                   <img width="40" src="src/assets/images/icon-partly-cloudy.webp" alt="">
+                                   <img class="w-[40px]" src="src/assets/images/icon-partly-cloudy.webp" alt="">
                                     <time>3 PM</time>
                                 </span>
                                 <span class="text-[16px]">
@@ -418,7 +453,7 @@
 
                             <div class="flex justify-between items-center gap-2 bg-neutral-700 rounded-[8px] border border-neutral-600 py-[10px] px-[10px] pr-[16px] pl-[12px] ">
                                 <span class="flex items-center gap-2">
-                                   <img width="40" src="src/assets/images/icon-fog.webp" alt="">
+                                   <img class="w-[40px]" src="src/assets/images/icon-fog.webp" alt="">
                                     <time>3 PM</time>
                                 </span>
                                 <span class="text-[16px]">
@@ -428,7 +463,7 @@
 
                             <div class="flex justify-between items-center gap-2 bg-neutral-700 rounded-[8px] border border-neutral-600 py-[10px] px-[10px] pr-[16px] pl-[12px] ">
                                 <span class="flex items-center gap-2">
-                                   <img width="40" src="src/assets/images/icon-rain.webp" alt="">
+                                   <img class="w-[40px]" src="src/assets/images/icon-rain.webp" alt="">
                                     <time>3 PM</time>
                                 </span>
                                 <span class="text-[16px]">
@@ -438,7 +473,7 @@
 
                             <div class="flex justify-between items-center gap-2 bg-neutral-700 rounded-[8px] border border-neutral-600 py-[10px] px-[10px] pr-[16px] pl-[12px] ">
                                 <span class="flex items-center gap-2">
-                                   <img width="40" src="src/assets/images/icon-sunny.webp" alt="">
+                                   <img class="w-[40px]" src="src/assets/images/icon-sunny.webp" alt="">
                                     <time>3 PM</time>
                                 </span>
                                 <span class="text-[16px]">
@@ -448,7 +483,7 @@
 
                             <div class="flex justify-between items-center gap-2 bg-neutral-700 rounded-[8px] border border-neutral-600 py-[10px] px-[10px] pr-[16px] pl-[12px] ">
                                 <span class="flex items-center gap-2">
-                                   <img width="40" src="src/assets/images/icon-storm.webp" alt="">
+                                   <img class="w-[40px]" src="src/assets/images/icon-storm.webp" alt="">
                                     <time>3 PM</time>
                                 </span>
                                 <span class="text-[16px]">
@@ -458,7 +493,7 @@
 
                             <div class="flex justify-between items-center gap-2 bg-neutral-700 rounded-[8px] border border-neutral-600 py-[10px] px-[10px] pr-[16px] pl-[12px] ">
                                 <span class="flex items-center gap-2">
-                                   <img width="40" src="src/assets/images/icon-snow.webp" alt="">
+                                   <img class="w-[40px]" src="src/assets/images/icon-snow.webp" alt="">
                                     <time>3 PM</time>
                                 </span>
                                 <span class="text-[16px]">
@@ -468,7 +503,7 @@
 
                             <div class="flex justify-between items-center gap-2 bg-neutral-700 rounded-[8px] border border-neutral-600 py-[10px] px-[10px] pr-[16px] pl-[12px] ">
                                 <span class="flex items-center gap-2">
-                                   <img width="40" src="src/assets/images/icon-snow.webp" alt="">
+                                   <img class="w-[40px]" src="src/assets/images/icon-snow.webp" alt="">
                                     <time>3 PM</time>
                                 </span>
                                 <span class="text-[16px]">
@@ -494,11 +529,10 @@
 <script type="text/javascript">
     // Dropdown behavior
     (function () {
-        var btn = document.getElementById('unitsDropdownBtn');
-        var menu = document.getElementById('unitsMenu');
-        var chevron = document.getElementById('unitsChevron');
+        let btn = document.getElementById('unitsDropdownBtn');
+        let menu = document.getElementById('unitsMenu');
+        let chevron = document.getElementById('unitsChevron');
 
-        if (!btn || !menu) return;
 
         function openMenu() {
             menu.classList.remove('hidden');
@@ -513,7 +547,7 @@
         }
 
         function toggleMenu() {
-            var expanded = btn.getAttribute('aria-expanded') === 'true';
+            let expanded = btn.getAttribute('aria-expanded') === 'true';
             expanded ? closeMenu() : openMenu();
         }
 
@@ -556,9 +590,9 @@
 
         // Selection handling
         menu.addEventListener('click', function (e) {
-            var target = e.target.closest('[role="menuitemradio"]');
+            let target = e.target.closest('[role="menuitemradio"]');
             if (!target) return;
-            var items = menu.querySelectorAll('[role="menuitemradio"]');
+            let items = menu.querySelectorAll('[role="menuitemradio"]');
             items.forEach(function (el) {
                 el.setAttribute('aria-checked', String(el === target));
             });
@@ -578,15 +612,52 @@
             }
         });
 
+
+        {
+            let btnDays = document.getElementById('daysDropdownBtn');
+            let menuDays = document.getElementById('daysMenu');
+            if (!btnDays || !menuDays) return;
+            if (!btn || !menu) return;
+
+            function openMenuDays() {
+                menuDays.classList.remove('hidden');
+                btnDays.setAttribute('aria-expanded', 'true');
+            }
+
+            function closeMenuDays() {
+                menuDays.classList.add('hidden');
+                btnDays.setAttribute('aria-expanded', 'false');
+            }
+
+            function toggleMenuDays() {
+                let expanded = btnDays.getAttribute('aria-expanded') === 'true';
+                expanded ? closeMenuDays() : openMenuDays();
+            }
+
+            btnDays.addEventListener('click', function (e) {
+                e.stopPropagation();
+                toggleMenuDays();
+            });
+
+            // Click outside to close days Menu
+            document.addEventListener('click', function (e) {
+                if (!menuDays.contains(e.target) && !btnDays.contains(e.target)) {
+                    closeMenuDays();
+                }
+            })
+
+        }
+
+
         // Close on window blur (optional)
         window.addEventListener('blur', closeMenu);
     })();
 
     // Search form behavior (no API calls; just UX helpers)
     (function () {
-        var input = document.getElementById('searchInput');
-        var clearBtn = document.getElementById('clearSearch');
-        var form = document.getElementById('searchForm');
+        let input = document.getElementById('searchInput');
+        let clearBtn = document.getElementById('clearSearch');
+        let form = document.getElementById('searchForm');
         if (!input || !clearBtn || !form) return;
 
         function updateClearVisibility() {
