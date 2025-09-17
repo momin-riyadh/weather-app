@@ -817,6 +817,11 @@
       max-width: 384px;
     }
   }
+  .lg\:max-w-\[800px\] {
+    @media (width >= 64rem) {
+      max-width: 800px;
+    }
+  }
   .lg\:grid-cols-7 {
     @media (width >= 64rem) {
       grid-template-columns: repeat(7, minmax(0, 1fr));
