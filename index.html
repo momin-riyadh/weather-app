@@ -531,31 +531,7 @@
         let btn = document.getElementById('unitsDropdownBtn');
         let menu = document.getElementById('unitsMenu');
         let chevron = document.getElementById('unitsChevron');
-        let btnDays = document.getElementById('daysDropdownBtn');
-        let menuDays = document.getElementById('daysMenu');
 
-        if (!btnDays || !menuDays) return;
-        if (!btn || !menu) return;
-
-        function openMenuDays() {
-            menuDays.classList.remove('hidden');
-            btnDays.setAttribute('aria-expanded', 'true');
-        }
-
-        function closeMenuDays() {
-            menuDays.classList.add('hidden');
-            btnDays.setAttribute('aria-expanded', 'false');
-        }
-
-        function toggleMenuDays() {
-            let expanded = btnDays.getAttribute('aria-expanded') === 'true';
-            expanded ? closeMenuDays() : openMenuDays();
-        }
-
-        btnDays.addEventListener('click', function (e) {
-            e.stopPropagation();
-            toggleMenuDays();
-        });
 
         function openMenu() {
             menu.classList.remove('hidden');
@@ -635,12 +611,42 @@
             }
         });
 
-        // Click outside to close days Menu
-        document.addEventListener('click', function (e) {
-            if (!menuDays.contains(e.target) && !btnDays.contains(e.target)) {
-                closeMenuDays();
+
+        {
+            let btnDays = document.getElementById('daysDropdownBtn');
+            let menuDays = document.getElementById('daysMenu');
+            if (!btnDays || !menuDays) return;
+            if (!btn || !menu) return;
+
+            function openMenuDays() {
+                menuDays.classList.remove('hidden');
+                btnDays.setAttribute('aria-expanded', 'true');
             }
-        })
+
+            function closeMenuDays() {
+                menuDays.classList.add('hidden');
+                btnDays.setAttribute('aria-expanded', 'false');
+            }
+
+            function toggleMenuDays() {
+                let expanded = btnDays.getAttribute('aria-expanded') === 'true';
+                expanded ? closeMenuDays() : openMenuDays();
+            }
+
+            btnDays.addEventListener('click', function (e) {
+                e.stopPropagation();
+                toggleMenuDays();
+            });
+
+            // Click outside to close days Menu
+            document.addEventListener('click', function (e) {
+                if (!menuDays.contains(e.target) && !btnDays.contains(e.target)) {
+                    closeMenuDays();
+                }
+            })
+
+        }
+
 
         // Close on window blur (optional)
         window.addEventListener('blur', closeMenu);
